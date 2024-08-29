@@ -7,7 +7,7 @@ import lombok.Setter;
 
 import java.io.Serializable;
 
-
+@AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
@@ -18,11 +18,6 @@ public class Payment implements Serializable {
   private Double dailyIncome;
   private Integer days;
 
-  public Payment(String name, Double dailyIncome, Integer days) {
-    this.name = name;
-    this.dailyIncome = dailyIncome;
-    this.days = days;
-  }
 
   private Double getTotal(){
     return days * dailyIncome;
